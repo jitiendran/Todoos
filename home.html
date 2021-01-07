@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Todoos </title>
+    <link rel="icon" href="assets/images/navbar-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="assets/todoo.css">
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+    <script src="assets/dbms.js"></script>
+    <script src="assets/todoo.js"></script>
+</head>
+<body>
+    <div class="body-content">
+        <div class="navbar-container">
+            <img src="assets/images/navbar-icon.png" alt="" class="navbar-icon">
+            <h1 class="navbar-title">Todoos</h1>
+            <hr>
+            <div class="navbar-content">
+                <div class="navbar-content-details">
+                    <div class="navbar-content-details-text">
+                        <a href="home.html">Home</a>
+                    </div>
+                    <div class="navbar-content-details-text">
+                        <a href="about.html">About us</a>     
+                    </div>
+                    <div class="navbar-content-details-text">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="navbar-content-details-text">
+                        <a href="#">Pending Tasks</a>
+                    </div>
+                </div>
+                <!-- <div class="navbar-footer-content">
+                    <div class="navbar-footer-content-details">
+                        <a href="#"><i class="fab fa-facebook"></i>&nbsp;&nbsp;Facebook</a>
+                    </div>
+                    <div class="navbar-footer-content-details">
+                        <a href="#"><i class="fab fa-twitter-square"></i>&nbsp;&nbsp;Twitter</a>
+                    </div>
+                    <div class="navbar-footer-content-details">
+                        <a href="#"><i class="fab fa-github"></i>&nbsp;&nbsp;Github</a>
+                    </div>
+                </div> -->
+    
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="quick-bar">
+                <div class="quickbar-content">
+                    <input type="text" class="search-bar" placeholder="search..." >
+                    <button class="search-btn" title="Search"><i class="fas fa-search"></i></button>
+                </div>
+                <!-- <script>
+                    firebase.database().ref('users/'+names_1).on('value',function(snapshot){
+                        var user = snapshot.val().UserName;
+                        document.getElementById('up').innerHTML = user;
+                    });
+                </script> -->
+                <div class="user" id="session">
+                    <a href="#"  onclick="dropdown()" class="user-contents">
+                        <i class="fas fa-user-circle">&nbsp;</i>
+                        <div class="up" id="up">
+                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-up"></i>
+                        </div>
+                        
+                    </a>
+                </div>
+            </div>
+            <div class="dropdown-container" id="drop">
+                <div class="dropdown-content">
+                    <a href="profile.html">Profile</a>
+                </div>
+                <div class="dropdown-content">
+                    <a href="help.html">Help</a>
+                </div>
+                <div class="dropdown-content">
+                    <a href="index.html">Log Out</a>
+                </div>
+            </div>
+            <br>
+            <div class="cards-create" id="display">
+                <div class="tasks">       
+                    <div class="task-content-title" id="task">
+                        <h1 class="card-title">Today</h1>
+                    </div> 
+                    <script>
+                        var today = new Date();
+                        var dd = String(today.getDate()).padStart(2, '0');
+                        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                        var yyyy = today.getFullYear();
+                        today = dd + '/' + mm + '/' + yyyy;
+                        console.log("The date is : "+today);
+                        var p = document.createElement("p");
+                        p.style.fontSize = "1.4em";
+                        p.style.color = "orange";
+                        p.style.marginTop = "-1em";
+                        p.appendChild(document.createTextNode(today));
+                        document.getElementById('task').appendChild(p);                     
+                    </script>                    
+                    <hr>
+                    <script>
+                        var i = 0;
+                            // function ucount(){
+                            //     firebase.database().ref('tasks/'+id).once('value',function(snapshot){
+                            //         var c1 = snapshot.numChildren();
+                            //         for(var n = 0 ; n < c1 ; n++){
+                            //             firebase.database().ref('tasks/'+w+'/'+title+n).on('value',function(snapshot){
+                            //             var task = snapshot.val().Tname;
+                            //             console.log("The task is : "+task);
+                            //             var w1 =  (m+1)+'.  '+task;
+                            //             var li = document.createElement("li");
+                            //             var p = document.createElement("p");
+                            //             p = document.createTextNode(w1);    
+                            //             li.appendChild(p);
+                            //             var removeBtn = document.createElement("input");
+                            //             removeBtn.type = "button";
+                            //             removeBtn.value = "X";
+                            //             removeBtn.onclick = remove;
+                            //             removeBtn.style.color = "black";
+                            //             removeBtn.style.backgroundColor = "orange";
+                            //             removeBtn.style.border = "none";
+                            //             removeBtn.style.outline = "none";
+                            //             removeBtn.style.borderRadius = ".2rem";
+                            //             removeBtn.style.fontSize = "1.2rem";
+                            //             removeBtn.style.fontWeight = "600";
+                            //             removeBtn.style.marginLeft = "2rem";
+                            //             removeBtn.style.cursor = "pointer";
+                            //             removeBtn.style.float = "right";
+                            //             li.appendChild(removeBtn);
+                            //             document.getElementById("list").style.display = "block";
+                            //             document.getElementById("list").appendChild(li);
+                            //             document.getElementById("title1").value = "";
+                            //             }
+                            //     });
+                            // }
+                        
+                        
+                        var w = prompt("Enter the Database id ");
+                        alert("Your id is "+w+" The database will be deleted after the creation of 24hrs.");
+                        function identify(){
+                            firebase.database().ref('id').on('value',function(snapshot){
+                                var id = snapshot.val().Id;
+                                console.log("Id is : "+id);
+                                if(w == id){
+                                    if(i == 0){
+                                        alert("Your id is been verified");
+                                    }
+                                    var title = 'task'+i;
+                                    readTask();
+                                    firebase.database().ref('tasks/'+id+'/'+title).set({
+                                        Tname : task
+                                    });
+                                    document.getElementById('title1').value = "";
+                                    display();
+                                    i++;
+                                }
+                                else{
+                                    alert("Your id isn't available");
+                                    // var w = prompt("Enter the Database id ");
+                                    // alert("Your id is "+id+" The database will be deleted after the creation of 24hrs.");
+                                    // identify();
+                                }
+                            });
+                        }
+                        var c = 0;
+                        function count(){
+                            c++;
+                        }
+                        var m = 0;
+                        function display(list){
+                            var title = 'task'+m;
+                            console.log("title : "+title+" Id is :"+w);
+                            firebase.database().ref('tasks/'+w+'/'+title).on('value',function(snapshot){
+                                var task = snapshot.val().Tname;
+                                console.log("The task is : "+task);
+                                var w1 =  (m+1)+'.  '+task;
+                                var li = document.createElement("li");
+                                var p = document.createElement("p");
+                                p = document.createTextNode(w1);    
+                                li.appendChild(p);
+                                var removeBtn = document.createElement("input");
+                                removeBtn.type = "button";
+                                removeBtn.value = "X";
+                                removeBtn.onclick = remove;
+                                removeBtn.style.color = "black";
+                                removeBtn.style.backgroundColor = "orange";
+                                removeBtn.style.border = "none";
+                                removeBtn.style.outline = "none";
+                                removeBtn.style.borderRadius = ".2rem";
+                                removeBtn.style.fontSize = "1.2rem";
+                                removeBtn.style.fontWeight = "600";
+                                removeBtn.style.marginLeft = "2rem";
+                                removeBtn.style.cursor = "pointer";
+                                removeBtn.style.float = "right";
+                                li.appendChild(removeBtn);
+                                document.getElementById("list").style.display = "block";
+                                document.getElementById("list").appendChild(li);
+                                document.getElementById("title1").value = "";
+                                m++;
+                            });
+                        }
+                    </script>
+                    <p class="create-text">Create as many task and add to the to-do list</p>
+                    <div class="input">
+                        <div class="task">
+                            <p class="task-title">Task </p>
+                        </div>
+                        <div class="task-input" id="display-task">
+                            <input type="text" placeholder="Task name..." id="title1">
+                        </div>
+                        <div class="insert-btn-style">
+                            <button class="insert-btn" onclick="identify()"><i class="fas fa-paper-plane"></i>&nbsp;add</button>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="cards-create1" id="list">
+            </div>
+            <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

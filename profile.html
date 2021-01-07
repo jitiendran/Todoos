@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todoos </title>
+    <link rel="icon" href="assets/images/navbar-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="assets/todoo.css">
+    <script src="assets/todoo.js"></script>
+</head>
+<body>
+    <div class="body-content">
+        <div class="navbar-container">
+            <img src="assets/images/navbar-icon.png" alt="" class="navbar-icon">
+            <h1 class="navbar-title">Todoos</h1>
+            <hr>
+            <div class="navbar-content">
+                <div class="navbar-content-details">
+                    <div class="navbar-content-details-text">
+                        <a href="home.html">Home</a>
+                    </div>
+                    <div class="navbar-content-details-text">
+                        <a href="about.html">About us</a>     
+                    </div>
+                    <div class="navbar-content-details-text">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="navbar-content-details-text">
+                        <a href="#">Pending Tasks</a>
+                    </div>
+                </div>
+                <!-- <div class="navbar-footer-content">
+                    <div class="navbar-footer-content-details">
+                        <a href="#"><i class="fab fa-facebook"></i>&nbsp;&nbsp;Facebook</a>
+                    </div>
+                    <div class="navbar-footer-content-details">
+                        <a href="#"><i class="fab fa-twitter-square"></i>&nbsp;&nbsp;Twitter</a>
+                    </div>
+                    <div class="navbar-footer-content-details">
+                        <a href="#"><i class="fab fa-github"></i>&nbsp;&nbsp;Github</a>
+                    </div>
+                </div> -->
+    
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="quick-bar">
+                <div class="quickbar-content">
+                    <input type="text" class="search-bar" placeholder="search..." >
+                    <button class="search-btn" title="Search"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user">
+                    <a href="#"  onclick="dropdown()" class="user-contents">
+                        <i class="fas fa-user-circle">&nbsp;</i>
+                        <p>Jitiendran</p>
+                        <div class="up" id="up">
+                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-up"></i>
+                        </div>
+                        
+                    </a>
+                </div>
+            </div>
+            <div class="dropdown-container" id="drop">
+                <div class="dropdown-content">
+                    <a href="profile.html">Profile</a>
+                </div>
+                <div class="dropdown-content">
+                    <a href="help.html">Help</a>
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">Log Out</a>
+                </div>
+            </div>
+            <div class="profile-container">
+                <div class="profile-avatar">
+                    <img src="assets/images/profile-avatar.png" alt="">
+                    <h1 class="profile-name">Jitiendran Ks</h1>
+                    <h1 class="profile-user">@jitiendran07</h1>
+                    <button class="edit-btn">Edit profile</button>
+                </div>
+                <div class="profile-content">
+                   <div class="profile-content-details">
+                       <div class="title-name">
+                           Name:
+                       </div>
+                       <div class="title-details">
+                           Jitiendran
+                       </div> 
+                   </div>
+                   <div class="profile-content-details">
+                       <div class="title-name">
+                           Username:
+                       </div>
+                       <div class="title-details">
+                           @jitiendran07
+                       </div> 
+                   </div>
+                   <div class="profile-content-details">
+                        <div class="title-name">
+                            Email:
+                        </div>
+                        <div class="title-details">
+                            jitiendranjiji2000@gmail.com
+                        </div> 
+                    </div>
+                    <div class="profile-content-details">
+                        <div class="title-name">
+                            Password:
+                        </div>
+                        <div class="title-details">
+                            ***********
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    
+</body>
+</html>

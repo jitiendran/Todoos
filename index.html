@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Todoos </title>
+    <link rel="icon" href="assets/images/navbar-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="assets/login.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+    <script src="assets/dbms.js"></script>
+    <script src="assets/todoo.js"></script>
+</head>
+<body>
+    <div class="loading-page" id="loading">
+        <div class="loading-page-content">
+            <div class="loading-page-content-title">
+                <img src="assets/images/navbar-icon.png" alt="">
+                <h1>Todoos</h1>
+            </div>
+            <div class="loader"></div>
+            <h1 class="wait">Please wait.....</h1>
+            <div class="footer-loader">
+                <img src="assets/images/indian-flag.png" alt="">
+                <h1>Made in love with India</h1>
+            </div>
+        </div>
+
+    </div>
+    <div class="content" id="main">
+        <div class="orange-color">
+        </div>
+        <div class="register-container">
+            <div class="register-title">
+                <img src="assets/images/navbar-icon.png" alt="">
+                <h1>Todoos</h1>
+            </div>
+            <hr>
+            <br>
+            <!-- <script>
+                var names_1 = document.getElementById('name-1').value;
+                document.getElementById('session').innerHTML = name_1;
+            </script> -->
+            <div class="register-content">
+                <label for="#" id="name-1">Name</label>
+                <input type="text">
+            </div>
+            <div class="register-content">
+                <label for="#" id="pass-1">Password</label>
+                <input type="password">
+            </div>
+            <button class="register-btn" onclick="get()">Log in</button>
+            <!-- <form action="index.html" ></form> -->
+            <p>Don't have an account? <a href="register.html">Sign in</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+body{
+    font-family: sans-serif;
+    background-color: #fff;
+    width: 90%;
+}
+.register-container{
+    display: flex;
+    /* position:relative; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 3em; */
+    width: 35%;
+    margin-left: 38%;
+    margin-top: -44em;
+    border-radius: .3em;
+    background-color: #313135;
+    box-shadow: inset  0px  0px 2px 2px #313135;
+    height: 42em;
+}
+.register-title{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -.6em;
+}
+.register-container img{
+    margin-top: 1.5em;
+    width: 2.3em;
+    height: 2.3em;
+}
+.register-container h1{
+    color: #eff3f7;
+    margin-left: .2em;
+    margin-top: .8em;
+}
+.register-container hr{
+    border: .01px solid gainsboro;
+    width: 99%;
+}
+.register-content{
+    display: flex;
+    flex-direction: column;
+}
+.register-content label{
+    color: #82B4F8;
+    font-size: 1.5em;
+    margin-right: 1em;
+    margin-bottom: .3em;
+}
+.register-content input[type=text]{
+    border: none;
+    outline: none;
+    color: #232427;
+    background: #fff;
+    border-bottom: none;
+    width: 15em;
+    height: 1.3em;
+    margin-bottom: 1em;
+    border-radius: .2em;
+    font-size: 1.5em;
+}
+.register-content input[type=password]{
+    color: #232427;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-bottom: none;
+    width: 15em;
+    height: 1.3em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    border-radius: .2em;
+}
+.register-btn{
+    margin-top: 0em;
+    width: 15em;
+    height: 1.8em;
+    font-size: 1.5em;
+    background-color: #62a0f8;
+    border: none;
+    outline: none;
+    border-radius: .2em;
+    cursor: pointer;
+}
+.register-container p{
+    color: #eff3f7;
+    font-size: 1.2em;
+}
+.register-container a{
+    color: orange;
+    text-decoration: none;
+}
+.orange-color{
+    background-color: orange;
+    margin-left: -.5em;
+    width: 96em;
+    margin-top: 27%;
+    height: 24.1em;
+    margin-bottom: -10em;
+}
+@media screen and (max-width: 767px){
+    body{
+        width: 90%;
+    }
+    .register-title{
+        margin-top: -1.5em;
+    }
+    .orange-color{
+        margin-top: 88.1%;
+        width: 111.2%;
+        height: 21em;
+        background-color: orange;
+    }
+    .register-content label{
+        font-size: 1.3em;
+    }
+    .register-container{
+        width: 96%;
+        margin-left: 1.4em;
+        height: 37em;
+        margin-top: -40em;
+    }
+    .register-content input[type=text],
+    .register-content input[type=password]{
+        width: 14.5em;
+        font-size: 1.4em;
+        margin-bottom: .5em;
+    }
+    .register-btn{
+        margin-top: .5em;
+        width: 14.5em;
+        font-size: 1.4em;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Todoos </title>
+    <link rel="icon" href="assets/images/navbar-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="assets/register.css">
+    <!-- <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+    <!-- <script src="/__/firebase/8.2.1/firebase-app.js"></script> -->
+
+    <!-- Add Firebase products that you want to use -->
+    <!-- <script src="/__/firebase/8.2.1/firebase-auth.js"></script>
+    <script src="/__/firebase/8.2.1/firebase-firestore.js"></script> -->
+    <script src="assets/todoo.js"></script>
+    <script src="assets/dbms.js"></script>
+    <!-- <script src="assets/dbms.js"></script> -->
+</head>
+<body>
+    <div class="orange-color">
+
+    </div>
+    <div class="register-container">
+        <div class="register-title">
+            <img src="assets/images/navbar-icon.png" alt="">
+            <h1>Todoos</h1>
+        </div>
+        <hr>
+        <br>
+        <!-- <form action="register.php" method="post"> -->
+            <div class="register-content">
+                <label for="#">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="register-content">
+                <label for="#">Username</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="register-content">
+                <label for="#">Email</label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div class="register-content">
+                <label for="#">Password</label>
+                <input type="password" id="pass" name="pass">
+            </div>
+            <div class="register-content">
+                <label for="#">Confirm password</label>
+                <input type="password" id="pass1" name="pass1">
+            </div>
+            <button class="register-btn" onclick="insert()" id="register">Register</button>
+        <!-- </form> -->
+        
+        <p>Already have an account? <a href="index.html">Sign up</a></p>
+    </div>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script> -->
+</body>
+</html>
